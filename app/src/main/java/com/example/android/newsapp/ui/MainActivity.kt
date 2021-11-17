@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         val newsRepository = NewsRepository()
 //        navController = Navigation.findNavController(this,R.id.nav_host_fragment)
-        val viewModelProviderFactory = NewsViewModelProviderFactory( newsRepository)
+        val viewModelProviderFactory = NewsViewModelProviderFactory( application,newsRepository)
         viewModel = ViewModelProvider(this, viewModelProviderFactory).get(NewsViewModel::class.java)
 //        // Retrieve NavController from the NavHostFragment
 //        val navHostFragment = supportFragmentManager

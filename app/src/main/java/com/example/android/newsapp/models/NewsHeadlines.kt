@@ -1,5 +1,5 @@
 package com.example.android.newsapp.models
-
+import java.io.Serializable
 data class NewsHeadlines (
     val source: Source? = null,
     val author: String,
@@ -9,4 +9,4 @@ data class NewsHeadlines (
     val urlToImage:String?,
     val publishedAt: String,
     val content: String
-        )
+        ): Serializable
